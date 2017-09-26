@@ -18,8 +18,9 @@ namespace Bibliotheek.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
+            var model = new AboutModel();
+            model.Name = "xyz";
+            return View(model);
         }
 
         public IActionResult Contact()
