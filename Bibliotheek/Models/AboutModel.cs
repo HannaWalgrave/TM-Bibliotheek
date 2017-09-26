@@ -10,5 +10,6 @@ namespace Bibliotheek.Models
         public string Name { get; set; }
 
         public DateTime Now => DateTime.Now;
+        public double DaysUntilBirthDay { get; set; }
     }
 }

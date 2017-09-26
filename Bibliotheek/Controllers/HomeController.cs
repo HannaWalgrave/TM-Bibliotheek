@@ -18,8 +18,11 @@ namespace Bibliotheek.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-            var model = new AboutModel();
-            model.Name = "xyz";
+            var model = new AboutModel
+            {
+                Name = "xyz",
+                DaysUntilBirthDay = (new DateTime(2018, 05, 05) - DateTime.Now).TotalDays
+            };
             return View(model);
         }
 
