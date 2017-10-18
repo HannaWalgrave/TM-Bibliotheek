@@ -34,8 +34,9 @@ namespace Bibliotheek.UnitTests
                     new AuthorBook {Author = new Author {FirstName = "ABC", LastName = "CDE"}}
                 }
             };
-            var comingOut = _controller.ConvertBookToEditDetailViewModel(goingIn);
+            var comingOut = _controller.ConvertBookToBookDetailViewModel(goingIn);
             Assert.Equal("Genre", comingOut.Genre);
+            Assert.Equal("ABC DEF", comingOut.Author);
             //TODO: check the other properties
             
         }

@@ -24,6 +24,8 @@ namespace Bibliotheek.UnitTests
         [InlineData(2)]
         [InlineData(3)]
         [InlineData(4)]
+        [InlineData(5)]
+
         public void OurFirstTheory(int value)
         {
             Assert.IsType(typeof(int), value);
